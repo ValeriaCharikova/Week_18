@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .text_bold {
+        font-weight: bold;
+      }
+      .text_grey {
+        color: gray;
+        font-size: smaller;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend class="text_bold">Информация о питомце</legend>
+        <div>
+          <label for="catName">Укажите кличку питомца*</label>
+          <input type="text" id="catName" placeholder="Кличка" required />
+        </div>
+        <br />
+        <div>
+          <label for="age">Укажите возраст питомца</label>
+          <input type="number" id="age" placeholder="Возраст" min="1" />
+        </div>
+        <br />
+        <div>
+          <label for="sex">Укажите пол питомца</label> <br />
+          Жен <input type="radio" id="sex" name="sex" /> <br />
+          Муж <input type="radio" name="sex" />
+        </div>
+        <br />
+        <div>
+          Укажите породу питомца
+          <select>
+            <option value="1" selected="selected">Выберите породу</option>
+            <option value="2">Абиссинская</option>
+            <option value="3">Британская</option>
+            <option value="4">Мейн-кун</option>
+            <option value="5">Персидская</option>
+            <option value="6">Сиамская</option>
+            <option value="7">Тайская</option>
+            <option value="8">Другая</option>
+          </select>
+        </div>
+        <br />
+        <p>Какой тип корма предпочитает питомец (можно выбрать несколько):</p>
+        <input type="checkbox" name="space" value="1" />
+        Сухой корм<br />
+        <input type="checkbox" name="space" value="2" />
+        Влажный корм <br />
+        <input type="checkbox" name="space" value="3" />
+        Натуральный корм <br />
+        <p>Дополнительная информация о питомце:</p>
+        <div>
+          <textarea
+            placeholder="Добавьте комментарий"
+            rows="10"
+            cols="50"
+          ></textarea>
+        </div>
+        <br />
+        <div>
+          Добавьте фото питомца <input type="file" />
+          <input type="button" value="Загрузить" />
+        </div>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend class="text_bold">Контактные данные владельца</legend>
+        <div>
+          <label for="ownerName">ФИО*</label>
+          <input
+            type="text"
+            id="ownerName"
+            placeholder="Иванов Иван Иванович"
+            required
+            pattern="^[А-ЯЁ][а-яё]+(-[А-ЯЁ][а-яё]+)? [А-ЯЁ][а-яё]+( [А-ЯЁ][а-яё]+)?$"
+          />
+        </div>
+        <br />
+        <div>
+          <label for="phone">Номер телефона для связи*</label>
+          <input
+            type="tel"
+            id="phone"
+            placeholder="+1(123)456-7890"
+            pattern="^\+?(\d{1,3})?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d$"
+            required
+          />
+        </div>
+        <br />
+        <div>
+          <label for="email">Электронная почта для связи</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="email@example.com"
+            pattern="^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i"
+          />
+        </div>
+      </fieldset>
+    </form>
+    <br />
+    <input type="button" name="save" value="Сохранить" />
+    <div class="text_grey">
+      <input type="checkbox" />
+      Нажимая кнопку "Сохранить", Вы даёте согласие на обработку
+      <a href="">персональных данных</a>.
+    </div>
+  </body>
+</html>
