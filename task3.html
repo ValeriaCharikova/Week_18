@@ -1,12 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      .inputs {
+        width: 250px;
+        margin-top: 10px;
+      }
+      .author {
+        color: green;
+        font-weight: bold;
+        padding-right: 10px;
+      }
+      #chat {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label for="photo"> Загрузить аватар: </label>
+      </div>
+      <div>
+        <input
+          type="url"
+          id="photo"
+          placeholder="Вставьте URL картинки"
+          class="inputs"
+        />
+      </div>
+      <br />
+      <div>
+        <label for="author"> Имя: </label>
+      </div>
+      <div>
+        <input
+          type="text"
+          name="author"
+          id="author"
+          placeholder="Имя"
+          class="inputs"
+        />
+      </div>
+      <br />
+      <div>
+        <label for="comment"> Комментарий: </label>
+      </div>
+      <div>
+        <textarea
+          name="comment"
+          id="comment"
+          placeholder="Текст комментария"
+          class="inputs"
+        ></textarea>
+      </div>
+      <br />
+      <div>
+        <input
+          type="button"
+          name="button"
+          id="button"
+          value="Отправить"
+          onclick="checkMessage()"
+        />
+      </div>
+    </form>
+    <div id="chat"></div>
+    <script src="./task3.js"></script>
+  </body>
 </html>
